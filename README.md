@@ -1,1 +1,56 @@
-This repository accompanies [arxiv...] and is intended to guide readers in reproducing the results presented in the manuscript at reduced system sizes using the provided notebook. The notebook offers a step-by-step workflow for computing quantities analogous to those reported in the paper. For computational tractability, the examples use very small system sizes to illustrate the framework. Readers aiming to approach the system sizes considered in the manuscript (or larger) are advised to run the calculations on a computing cluster and to leverage GPU acceleration. For any questions, feel free to contact me. 
+# Tensor Network Approach to Moiré Excitons
+
+Code and data accompanying the manuscript: **(arxiv link)**. This repository provides a reference implementation of tensor network methods applied to moiré excitons.
+
+This repository aims to:
+- Provide core algorithms used in the paper
+- Include example workflows showing basic usage
+- Offer minimal reproducible examples at small system sizes
+
+---
+
+## Repository structure
+
+### `Main_Modules`
+
+Core implementations of the methods presented in the manuscript:
+- `Hamiltonians.jl`: Used to fetch the 2D single-particle Hamiltonian on a square lattice as a matrix product operator (MPO)
+- `ExcitonKPM.jl`: Kernel Polynomial Algorithms and routines for exciton observables
+- `exciton_builders.jl`: functions to build the exciton Hamiltonian MPO
+- `extra_util.jl`: extra utilities for tensor manipulations, e.g., interleaved ordering.
+- `kin_builders.jl`: helper functions to build kinetic operators in MPO format for single-particle Hamiltonians
+
+### `Examples notebook`
+
+Examples (same as in the manuscript) illustrating methodology at tractable system sizes:
+- `Examples_ExcitonTN.ipynb`: Step-by-step notebook showing how to build Hamiltonians, compute observables, and visualize results
+
+---
+
+## Installation
+
+The code is written in **Julia**. The required packages are shown below.
+
+### Required packages
+
+Run the following in the Julia REPL before using the repository:
+```julia
+using Pkg
+
+Install all dependencies via:
+
+```julia
+using Pkg
+
+Pkg.add([
+    "ITensors",
+    "ITensorMPS",
+    "Quantics",
+    "QuanticsTCI",
+    "TensorCrossInterpolation",
+    "TCIITensorConversion",
+    "FFTW",
+    "ProgressMeter",
+    "Plots",
+    "LaTeXStrings"
+])
