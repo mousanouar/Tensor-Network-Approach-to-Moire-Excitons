@@ -1,6 +1,6 @@
 # Tensor Network Approach to Moiré Excitons
 
-Code and data accompanying the manuscript: **([arxiv link](https://arxiv.org/abs/2603.02011))**. This repository provides a reference implementation of tensor network methods applied to moiré excitons.
+Code and data accompanying the manuscript: **[arxiv link](https://arxiv.org/abs/2603.02011)**. This repository provides a reference implementation of tensor network methods applied to moiré excitons.
 
 This repository aims to:
 - Provide core algorithms used in the paper
